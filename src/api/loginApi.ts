@@ -3,7 +3,7 @@ export const LoginApi = async (data: any) => {
 
     return axios({
         method: "post",
-        url: "http://localhost:8080/auth/login",
+        url: "http://10.1.38.64:8080/auth/login",
         data: data,
     })
         .then(function (response) {
@@ -20,7 +20,7 @@ export const LoginApi = async (data: any) => {
 export const RegisterApi = (data: any) => {
     axios({
         method: "post",
-        url: "http://localhost:8080/auth/register",
+        url: "http://10.1.38.64:8080/auth/register",
         data: data,
     })
         .then(function (response) {
