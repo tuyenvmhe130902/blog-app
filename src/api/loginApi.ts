@@ -1,18 +1,16 @@
 import axios from "axios";
 export const LoginApi = async (data: any) => {
-
-    return axios({
+    return  axios({
         method: "post",
-        url: "http://10.1.38.64:8080/auth/login",
+        url: "https://dull-cyan-drill-fez.cyclic.app/auth/login",
         data: data,
     })
         .then(function (response) {
             //handle success
-            return response.data
+            return response
         })
         .catch(function (error) {
             //handle error
-            console.log(error, "1111111111111111")
             return error.response
         });
 }
@@ -20,7 +18,7 @@ export const LoginApi = async (data: any) => {
 export const RegisterApi = (data: any) => {
     axios({
         method: "post",
-        url: "http://10.1.38.64:8080/auth/register",
+        url: "https://dull-cyan-drill-fez.cyclic.app/auth/register",
         data: data,
     })
         .then(function (response) {
