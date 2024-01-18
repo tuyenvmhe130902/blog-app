@@ -2,8 +2,9 @@ import axios from "axios";
 export const LoginApi = async (data: any) => {
     return  axios({
         method: "post",
-        url: "https://dull-cyan-drill-fez.cyclic.app/auth/login",
+        url: "http://localhost:8080/auth/login",
         data: data,
+        headers: {"Access-Control-Allow-Origin": "*"}
     })
         .then(function (response) {
             //handle success
@@ -18,7 +19,7 @@ export const LoginApi = async (data: any) => {
 export const RegisterApi = (data: any) => {
     axios({
         method: "post",
-        url: "https://dull-cyan-drill-fez.cyclic.app/auth/register",
+        url: "http://localhost:8080/auth/register",
         data: data,
     })
         .then(function (response) {
